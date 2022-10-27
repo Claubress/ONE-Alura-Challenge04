@@ -1,0 +1,20 @@
+:root {
+    --col-body-bg: #FFFFFF;
+    --col-main-text: #464646;
+    --col-action-text: #2A7AE4;
+    --col-main-bg: #E5E5E5;
+    --col-footer-bg: #EAF2FD;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--col-body-bg) ;
+    box-sizing: border-box;
+    color: var(--col-text-main);
+}
+
+a {
+    text-decoration: none;
+}
+
+
