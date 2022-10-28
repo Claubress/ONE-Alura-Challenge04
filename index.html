@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Referencia favicon -->
-    <link rel="icon" type="image/png" href="assets/favicon.png"/>
+    <link rel="icon" type="image/png" href="assets/generals/favicon.png"/>
 
     <!-- Referencia fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,24 +18,50 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
 
+    <link rel="stylesheet" href="styles/components/component-button.css">
+
+
+    <link rel="stylesheet" href="styles/head.css">
+
     <title>AluraGeek</title>
 </head>
 <body>
 
-    <header>
+    <header id="head" class="head">
+        
+        <nav class="head__navegacion">
+            
+            <ul class="head__links">
+                
+                <li class="head__search">
 
-        <img src="assets/generals/Logo.svg" alt="Logo AluraGeek">
+                    <a href="#head">
+                        <img class="head__search__logo" src="assets/generals/Logo.svg" alt="Logo AluraGeek">                        
+                    </a>
 
-        <a href="#">
-            <button>Login</button>
-        </a>
+                    <form action="" class="head__search__bar">
+                        <input class="head__search__bar__input" type="text" placeholder="¿Qué deseas buscar?" name="q">
+                        <button class="head__search__bar__button" type="submit">
+                            <img class="head__search__bar__img" src="assets/generals/search.svg" alt="Buscar">
+                        </button>
+                    </form>
 
-        <a href="#">
-            <img src="assets/generals/find.png" alt="Buscar">
-        </a>
-
+                </li>
+                <li>
+                    <a href="#">
+                        <button class="head__button component__button component__button--clear">Login</button>
+                    </a>
+                </li>
+                <li class="head__search__icon">
+                    <a href="#">
+                        <img src="assets/generals/search.png" alt="Buscar">
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    
+
+
     <main>
 
         <section>
@@ -64,7 +90,7 @@
             </div>
         </section>
 
-        <section class="footer">
+        <section>
 
             <div>
                 <img src="assets/generals/Logo.svg" alt="">
@@ -101,7 +127,7 @@
     </main>
     
     <!-- Sección de Footer -->
-    <section class="footer">
+    <section>
         <div>
             <p>Desarrollado por Claudio Bressan</p>
             <p>2022</p>
