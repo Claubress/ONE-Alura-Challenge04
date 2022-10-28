@@ -10,6 +10,8 @@
     --col-main-text: #464646;
     --col-search-bg: #F5F5F5;
     --col-input-ph: #A2A2A2;
+    --col-white-text: #FFFFFF;
+
 }
 
 
@@ -28,9 +30,26 @@ a {
     padding: 1rem;
 }
 
+.hero {
+    background-image: url(../assets/generals/banner.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 4.5rem 1rem 1rem 1rem;
+}
+
 @media (min-width: 768px) {
     .head {
         padding: 1rem 2rem;
+    }
+
+    .hero {
+        gap: 1rem;
+        padding: 10.0625rem 2rem 2rem 2rem;
     }
 }
 
@@ -38,5 +57,9 @@ a {
     .head {
         padding: 2rem 9.5rem;
     }
-    
+
+    .hero {
+        padding: 9.375rem 9.5rem 2rem 9.5rem;
+    }
+
 }
