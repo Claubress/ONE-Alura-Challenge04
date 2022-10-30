@@ -77,7 +77,7 @@
     }
 }
 
-@media (min-width: 1224px) { 
+@media (min-width: 1366px) { 
 
     .productsline__top__title {
         font-size: 2rem;
@@ -85,10 +85,17 @@
     }    
     
     .productsline__list__product {
-        width: 11rem;
+        width: 10rem;
     }
 
     .productsline__list__product--full {
         display: flex;
+    }
+}
+
+@media (min-width: 1440px) { 
+    
+    .productsline__list__product {
+        width: 11rem;
     }
 }

@@ -1,0 +1,125 @@
+.footer__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
+
+.footer__contact_title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.1875rem;;
+}
+
+
+.footerform__input {
+    border: none;
+    border-bottom: 2px solid #c8c8c8;
+    border-radius: 2px;
+    color: var(--col-main-text);
+    height: 3.5rem;
+    padding: 1rem 0 0 0.75rem;
+    width: 100%;
+}
+
+.footerform__textarea {
+    border: none;
+    border-bottom: 2px solid #c8c8c8;
+    border-radius: 2px;
+    color: var(--col-main-text);
+    height: 5.125rem;
+    padding: 1.75rem 0 0 0.75rem;
+    resize: none;
+    width: 100%;
+}
+
+.footerform__input:focus, .footerform__textarea:focus {
+    outline: none;
+}
+
+
+/* Efecto input */
+.footerform__input__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    position: relative;
+}
+  
+.footerform__input::placeholder, .footerform__textarea::placeholder {
+    visibility: hidden;
+}
+
+.footerform__label {
+    color: var(--col-input-ph); 
+    left: 0.75rem;  
+    position: absolute;
+    transition: all 0.25s;
+    top: 1.1rem;
+}
+
+.footerform__input:not(:placeholder-shown) + .footerform__label,
+.footerform__input:focus + .footerform__label,
+.footerform__textarea:not(:placeholder-shown) + .footerform__label,
+.footerform__textarea:focus + .footerform__label 
+{
+    color: var(--col-action-text);
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    transition: all 0.25s;
+    top: 0.5rem;
+}
+
+.footerform__input:not(:focus) + .footerform__label,
+.footerform__textarea:not(:focus) + .footerform__label {
+    color: var(--col-input-ph);
+}
+/* Fin efecto input */
+
+.footerform__input__container--invalid {
+    margin-bottom: 0.5rem;
+}
+
+.footerform__input__container--invalid .footerform__input {
+    border: 1px solid var(--col-warning);
+}
+
+.footerform__input__container--invalid .footerform__textarea {
+    border: 1px solid var(--col-warning);
+}
+
+.footerform__input__container--invalid .footerform__label {
+    color: var(--col-warning);
+}
+  
+.footerform__message__error {
+    display: none;
+}
+  
+.footerform__input__container--invalid .footerform__message__error {
+    color: var(--col-warning);
+    display: block;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.footerform__button {
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1rem;
+}
+
+@media (min-width: 768px) {
+    .footer__contact {
+        width: 64%;
+    }
+}
+
+@media (min-width: 1224px) {
+    .footer__contact {
+        width: 50%;
+    }
+}

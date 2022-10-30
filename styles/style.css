@@ -11,7 +11,7 @@
     --col-search-bg: #F5F5F5;
     --col-input-ph: #A2A2A2;
     --col-white-text: #FFFFFF;
-
+    --col-warning: #df2525;
 }
 
 
@@ -48,6 +48,23 @@ a {
     gap: 1rem;
 }
 
+.footer {
+    background-color: var(--col-footer-bg);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.developer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
 @media (min-width: 768px) {
     .head {
         padding: 1rem 2rem;
@@ -61,6 +78,19 @@ a {
     .productsline {
         padding: 2rem;
     }
+
+    .footer {
+        flex-direction: row;
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+    .developer {
+        align-items:  center;
+        flex-direction: row;
+        padding: 2rem 2rem;
+    }
+
 }
 
 @media (min-width: 1224px) {
@@ -73,6 +103,10 @@ a {
     }
 
     .productsline {
+        padding: 2rem 9.5rem;
+    }
+
+    .footer {
         padding: 2rem 9.5rem;
     }
 
