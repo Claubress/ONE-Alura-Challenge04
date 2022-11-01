@@ -23,7 +23,10 @@
 
 
     <link rel="stylesheet" href="styles/head.css">
-    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/hero.css">
+
+    <link rel="stylesheet" href="styles/addproduct.css">
+
     <link rel="stylesheet" href="styles/footer/left.css">
     <link rel="stylesheet" href="styles/footer/contact.css">
     <link rel="stylesheet" href="styles/developer.css">
@@ -48,6 +51,11 @@
                         </button>
                     </form>
                 </li>
+                <li>
+                    <a href="administator.html">
+                        <button class="head__button component__button component__button--clear">Menú administrador</button>
+                    </a>
+                </li>
                 <li class="head__search__icon">
                     <a href="#">
                         <img src="assets/generals/search.png" alt="Buscar">
@@ -57,37 +65,53 @@
         </nav>
     </header>
 
+
     <main>
 
-        <section class="login">
+        <section class="addproduct">
 
-            <div class="login__contact">
+            <div class="addproduct__contact">
 
-                <h3 class="login__contact_title">Iniciar Sesión</h3>
-    
-                <form class="loginform" action="" name="form" id="form">
-    
-                    
-                    <div class="loginform__input__container">
-                        <input class="loginform__input" type="email" name="email" placeholder="Escriba su correo electrónico" required data-type="name">
-                        <span class="loginform__message__error"> Escriba su correo electrónico</span>
+                <h3 class="addproduct__contact__title">Agregar nuevo producto</h3>
+
+                <form class="addform" action="" name="addform" id="addform">
+
+                    <div class="component__input__container">
+                        <input class="component__input" type="text" name="url" placeholder="URL de la imagen" required pattern="[\s\S]{1,50}" data-type="url" autocomplete="off">
+                        <label class="component__label" for="url">URL de la imagen</label>
+                        <span class="component__message__error"> Este campo no es valido</span>
                     </div>
-    
-                    <div class="loginform__input__container">
-                        <input class="loginform__input" type="password" name="password" placeholder="Escriba su contraseña" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" autocomplete="off"data-type="password">
-                        <span class="loginform__message__error"> Este campo no es valido</span>
+
+                    <div class="component__input__container">
+                        <input class="component__input" type="text" name="category" placeholder="Categoría" required pattern="[\s\S]{1,50}" data-type="category" autocomplete="off">
+                        <label class="component__label" for="category">Categoría</label>
+                        <span class="component__message__error"> Este campo no es valido</span>
                     </div>
-                    <div class="loginform__button__container">
-                        <!-- Ver esto en laversion final 
-                        <button type="submit" class="loginform__button component__button component__button--fill">Entrar</button>
-                        -->
-                        <a href="administator.html">
-                            <button type="button" class="loginform__button component__button component__button--fill component__button--full">Entrar</button>
-                        </a>
+
+                    <div class="component__input__container">
+                        <input class="component__input" type="text" name="nameproduct" placeholder="Nombre del producto" required pattern="[\s\S]{1,50}" data-type="nameproduct" autocomplete="off">
+                        <label class="component__label" for="nameproduct">Nombre del producto</label>
+                        <span class="component__message__error"> Este campo no es valido</span>
                     </div>
-    
+
+                    <div class="component__input__container">
+                        <input class="component__input" type="text" name="price" placeholder="Precio" required pattern="[\s\S]{1,50}" data-type="price" autocomplete="off">
+                        <label class="component__label" for="price">Precio</label>
+                        <span class="component__message__error"> Este campo no es valido</span>
+                    </div>
+
+                    <div class="component__input__container">
+                        <input class="component__input" type="text" name="description" placeholder="Descripción del producto" required pattern="[\s\S]{1,50}" data-type="description" autocomplete="off">
+                        <label class="component__label" for="description">Descripción del producto</label>
+                        <span class="component__message__error"> Este campo no es valido</span>
+                    </div>
+             
+                    <button type="submit" class="component__button component__button component__button--fill component__button--full">Agregar Producto</button>
+
                 </form>
+
             </div>
+
         </section>
 
         <section class="footer">
@@ -152,5 +176,6 @@
             <p>2022</p>
         </div>
     </section>
+
 </body>
 </html>

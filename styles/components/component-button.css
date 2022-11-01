@@ -8,6 +8,10 @@
     color: white;
 }
 
+.component__button--full {
+    width: 100%;
+}
+
 .component__button--clear {
     background-color: var(--col-body-bg);
     color: var(--col-action-text);
