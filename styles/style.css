@@ -42,6 +42,7 @@ a {
 }
 
 .productsline {
+    background-color: var(--col-main-bg);
     padding: 1rem;
     display: flex;
     flex-direction: column;
