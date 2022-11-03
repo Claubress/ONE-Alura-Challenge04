@@ -12,11 +12,6 @@
     gap: 1rem;
 }
 
-.addproduct__contact__title {
-    font-weight: 700;
-    font-size: 1.375rem;
-    line-height: 1.325rem;
-}
 
 @media (min-width: 768px) {
     .addproduct {
@@ -32,10 +27,4 @@
     .addproduct {
         padding: 4rem 27.5312rem;
     }    
-
-    .addproduct__contact__title {
-        font-weight: 700;
-        font-size: 2rem;
-        line-height: 2.375rem;    
-    }
 }

@@ -11,11 +11,13 @@
     line-height: 1.1875rem;;
 }
 
+
 @media (min-width: 768px) {
     .footer__contact {
         width: 64%;
     }
 }
+
 
 @media (min-width: 1224px) {
     .footer__contact {
