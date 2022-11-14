@@ -65,25 +65,24 @@
 
                 <h3 class="login__contact_title">Iniciar Sesión</h3>
     
-                <form class="loginform" action="" name="form" id="form">
+                <form class="loginform" action="" name="form" id="formLogin">
     
                     
                     <div class="loginform__input__container">
-                        <input class="loginform__input" type="email" name="email" placeholder="Escriba su correo electrónico" required data-type="name">
+                        <input class="loginform__input" type="email" name="email" placeholder="Escriba su correo electrónico" required data-type="email" data-email>
                         <span class="loginform__message__error"> Escriba su correo electrónico</span>
                     </div>
     
                     <div class="loginform__input__container">
-                        <input class="loginform__input" type="password" name="password" placeholder="Escriba su contraseña" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" autocomplete="off"data-type="password">
+                        <input class="loginform__input" type="password" name="password" placeholder="Escriba su contraseña" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" autocomplete="off" data-type="password" data-password>
                         <span class="loginform__message__error"> Este campo no es valido</span>
                     </div>
                     <div class="loginform__button__container">
-                        <!-- Ver esto en la version final 
                         <button type="submit" class="loginform__button component__button component__button--fill">Entrar</button>
-                        -->
-                        <a href="../screens/administator.html">
+                       
+                        <!-- <a href="../screens/administator.html">
                             <button type="button" class="loginform__button component__button component__button--fill component__button--full">Entrar</button>
-                        </a>
+                        </a> -->
                     </div>
     
                 </form>

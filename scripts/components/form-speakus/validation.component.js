@@ -5,8 +5,6 @@ export function handleValid(input) {
         validators[typeInput](input);
     }
 
-    console.log(input.validity);
-
     if(input.validity.valid) {
         input.parentElement.classList.remove("component__input__container--invalid");
         input.parentElement.querySelector(".component__message__error").innerHTML = "";
