@@ -52,7 +52,7 @@
                     </form>
                 </li>
                 <li>
-                    <a href="login.html">
+                    <a href="/screens/login.html">
                         <button class="head__button component__button component__button--clear">Login</button>
                     </a>
                 </li>
@@ -94,7 +94,7 @@
                     <img class="component__card__img" src="assets/products/unsplash_6FDXGY9J6y4.png" alt="">
                     <p class="component__card__name">Producto XYZ</p>
                     <p class="component__card__price">R$ 60,00</p>
-                    <a class="component__card__link" href="product.html">Ver producto</a>
+                    <a class="component__card__link" href="screens/product.html">Ver producto</a>
                 </div>
 
                 <!-- Cuando se incorpore js, borra--> 
@@ -281,16 +281,16 @@
 
                 <h3 class="footer__contact__title">Hable con nosotros</h3>
 
-                <form class="footerform" action="" name="form" id="form">
+                <form class="footerform" action="https://formspree.io/f/xaykdbbr" method="post" name="form" id="formSpeakUs">
 
                     <div class="component__input__container">
-                        <input class="component__input" type="text" name="nombre" placeholder="Nombre" required pattern="[\s\S]{1,50}" data-type="name" autocomplete="off">
+                        <input class="component__input" type="text" name="nombre" placeholder="Nombre" required pattern="[\s\S]{1,40}" data-type="name" autocomplete="off">
                         <label class="component__label" for="nombre">Nombre</label>
-                        <span class="component__message__error"> Este campo no es valido</span>
+                        <span class="component__message__error">Este campo no es valido</span>
                     </div>
 
                     <div class="component__input__container">
-                        <textarea class="component__textarea" rows="5" cols="40" id="menssage" name="mensaje" placeholder="Escribe tu mensaje" required pattern="[\s\S]{1,300}" data-type="message"></textarea>
+                        <textarea class="component__textarea" rows="5" cols="40" id="message" name="mensaje" placeholder="Escribe tu mensaje" required maxlength="130" data-type="message"></textarea>
                         <label class="component__label" for="mensaje">Mensaje</label>
                         <span class="component__message__error">Este campo no es valido</span>
                     </div>
@@ -321,6 +321,6 @@
             <p>2022</p>
         </div>
     </section>
-
+    <script type="module" src="scripts/controllers/app.controller.js"></script>
 </body>
 </html>
