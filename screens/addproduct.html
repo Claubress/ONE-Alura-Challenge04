@@ -53,7 +53,7 @@
                     </form>
                 </li>
                 <li>
-                    <a href="administator.html">
+                    <a href="administrator.html">
                         <button class="head__button component__button component__button--clear">Menú administrador</button>
                     </a>
                 </li>
@@ -71,38 +71,60 @@
 
         <section class="addproduct">
 
-            <div class="addproduct__contact">
+            <div class="addproduct__container">
 
                 <h3 class="component__title">Agregar nuevo producto</h3>
 
-                <form class="addform" action="" name="addform" id="addform">
+                <form class="addform" action="" name="addform" id="formAddProduct">
+
+                    <div class="addproduct__container__file">
+
+                        <div class="file__result" id="result-image">
+							<img id="img-result" alt="" />
+                        </div>
+
+
+                        <span class="file__o">o</span>
+
+                        <button id="file-button" class="component__button component__button--clear">Busque en su computador</button>
+
+                        <input type="file" name="image" id="inputImage" hidden/>
+
+                    </div>
+
 
                     <div class="component__input__container">
-                        <input class="component__input" type="text" name="url" placeholder="URL de la imagen" required pattern="[\s\S]{1,50}" data-type="url" autocomplete="off">
+                        <input class="component__input" type="text" name="url" placeholder="URL de la imagen" required data-type="url" autocomplete="off" id="form-input">
                         <label class="component__label" for="url">URL de la imagen</label>
                         <span class="component__message__error"> Este campo no es valido</span>
                     </div>
 
                     <div class="component__input__container">
-                        <input class="component__input" type="text" name="category" placeholder="Categoría" required pattern="[\s\S]{1,50}" data-type="category" autocomplete="off">
+                        
+                        <select class="component__input" type="text" name="category" placeholder="Categoría" required pattern="[\s\S]{1,50}" data-type="category" autocomplete="off">
+                            <option value="1">Star Wars</option>
+                            <option value="2">Consolas</option>
+                            <option value="3">Diversos</option>
+                        </select>
+                        
                         <label class="component__label" for="category">Categoría</label>
                         <span class="component__message__error"> Este campo no es valido</span>
                     </div>
 
                     <div class="component__input__container">
-                        <input class="component__input" type="text" name="nameproduct" placeholder="Nombre del producto" required pattern="[\s\S]{1,50}" data-type="nameproduct" autocomplete="off">
+                        <input class="component__input" type="text" name="nameproduct" placeholder="Nombre del producto" required pattern="[\s\S]{1,20}" data-type="nameproduct" autocomplete="off">
                         <label class="component__label" for="nameproduct">Nombre del producto</label>
                         <span class="component__message__error"> Este campo no es valido</span>
                     </div>
 
                     <div class="component__input__container">
-                        <input class="component__input" type="text" name="price" placeholder="Precio" required pattern="[\s\S]{1,50}" data-type="price" autocomplete="off">
+                        <input class="component__input" type="number" step="0.01" name="price" placeholder="Precio" required data-type="price" autocomplete="off">
                         <label class="component__label" for="price">Precio</label>
                         <span class="component__message__error"> Este campo no es valido</span>
                     </div>
 
                     <div class="component__input__container">
-                        <input class="component__input" type="text" name="description" placeholder="Descripción del producto" required pattern="[\s\S]{1,50}" data-type="description" autocomplete="off">
+                        <input class="component__input" type="text" name="description" placeholder="Descripción del producto" required pattern="[\s\S]{1,150}" data-type="description" autocomplete="off">
                         <label class="component__label" for="description">Descripción del producto</label>
                         <span class="component__message__error"> Este campo no es valido</span>
                     </div>
