@@ -1,5 +1,7 @@
+import { loadFormSpeakUs } from "../components/form-speakus/load.component.js";
 import { loadFormAddproduct } from "../components/form-addproduct/load.component.js";
 
+loadFormSpeakUs();
 loadFormAddproduct();
 
 const fileInput = document.getElementById('inputImage')
@@ -67,7 +69,8 @@ const uploadImage = (file) => {
 	const fileReader = new FileReader();
 	fileReader.readAsDataURL(file);
 	fileReader.addEventListener('load', (e) => {
-		img.setAttribute('src', e.target.result);		
+		img.setAttribute('src', e.target.result);
+		console.log(e.target.result);		
 	});
 }
 

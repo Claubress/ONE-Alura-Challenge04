@@ -35,17 +35,17 @@
     <title>AluraGeek</title>
 </head>
 <body>
-    <header id="head" class="head">        
+    <header id="head" class="head">
         <nav class="head__navegacion">
             <ul class="head__links">
                 <li class="head__search">
 
                     <a href="#head">
-                        <img class="head__search__logo" src="assets/generals/Logo.svg" alt="Logo AluraGeek">                        
+                        <img class="head__search__logo" src="assets/generals/Logo.svg" alt="Logo AluraGeek">
                     </a>
 
                     <form action="" class="head__search__bar">
-                        <input class="head__search__bar__input" type="text" placeholder="¿Qué deseas buscar?" name="q">
+                        <input class="head__search__bar__input" type="search" placeholder="¿Qué deseas buscar?" name="q" data-search>
                         <button class="head__search__bar__button" type="submit">
                             <img class="head__search__bar__img" src="assets/generals/search.svg" alt="Buscar">
                         </button>
@@ -74,12 +74,12 @@
             <a href="#consolas">
                 <button class="hero__button component__button component__button--fill">Ver Consolas</button>
             </a>
-    
+
         </section>
 
         <section class="productsline">
 
-            
+
             <div class="productsline__top">
                 <h2 class="component__title">Star Wars</h2>
                 <a class="productsline__top__link" href="#">
@@ -88,54 +88,10 @@
             </div>
 
 
-            <div class="component__card__container">
+            <div class="component__card__container" data-starwars>
 
-                <div class="component__card">
-                    <img class="component__card__img" src="assets/products/unsplash_6FDXGY9J6y4.png" alt="">
-                    <p class="component__card__name">Producto XYZ</p>
-                    <p class="component__card__price">R$ 60,00</p>
-                    <a class="component__card__link" href="screens/product.html">Ver producto</a>
-                </div>
+                <!-- Cards agregadas con js -->
 
-                <!-- Cuando se incorpore js, borra--> 
-
-                <div class="component__card">
-                    <img class="component__card__img" src="assets/products/unsplash_epRFE_hBNjo.png" alt="">
-                    <p class="component__card__name">Producto XYZ</p>
-                    <p class="component__card__price">R$ 60,00</p>
-                    <a class="component__card__link" href="#">Ver producto</a>
-                </div>
-
-                <div class="component__card">
-                    <img class="component__card__img" src="assets/products/unsplash_KeGToDVN0l4.png" alt="">
-                    <p class="component__card__name">Producto XYZ</p>
-                    <p class="component__card__price">R$ 60,00</p>
-                    <a class="component__card__link" href="#">Ver producto</a>
-                </div>
-
-                <div class="component__card">
-                    <img class="component__card__img" src="assets/products/unsplash_4OHkK555s1A.png" alt="">
-                    <p class="component__card__name">Producto XYZ</p>
-                    <p class="component__card__price">R$ 60,00</p>
-                    <a class="component__card__link" href="#">Ver producto</a>
-                </div>
-
-
-                <div class="component__card component__card--full" >
-                    <img class="component__card__img" src="assets/products/unsplash_R8L1l9RN198.png" alt="">
-                    <p class="component__card__name">Producto XYZ</p>
-                    <p class="component__card__price">R$ 60,00</p>
-                    <a class="component__card__link" href="#">Ver producto</a>
-                </div>
-
-                <div class="component__card component__card--full">
-                    <img class="component__card__img" src="assets/products/unsplash_1VV1MRafd7A.png" alt="">
-                    <p class="component__card__name">Producto XYZ</p>
-                    <p class="component__card__price">R$ 60,00</p>
-                    <a class="component__card__link" href="#">Ver producto</a>
-                </div>
-
-                <!-- ============================================== -->
             </div>
 
 
@@ -143,57 +99,18 @@
 
         <section class="productsline">
 
-            
+
             <div id="consolas" class="productsline__top">
-                <h2 class="productsline__top__title">Consolas</h2>
+                <h2 class="component__title">Consolas</h2>
                 <a class="productsline__top__link" href="#">
                     Ver todo <img src="assets/generals/arrow-icon.png" alt="Buscar">
                 </a>
             </div>
 
 
-         <div class="component__card__container">
+            <div class="component__card__container" data-consolas>
 
-                <div class="component__card">
-                    <img class="component__card__img" src="assets/products/unsplash_0POwK6iAiRQ.png" alt="">
-                    <p class="component__card__name">Producto XYZ</p>
-                    <p class="component__card__price">R$ 60,00</p>
-                    <a class="component__card__link" href="#">Ver producto</a>
-                </div>
-                <div class="component__card">
-                    <img class="component__card__img" src="assets/products/unsplash_caNzzoxls8Q.png" alt="">
-                    <p class="component__card__name">Producto XYZ</p>
-                    <p class="component__card__price">R$ 60,00</p>
-                    <a class="component__card__link" href="#">Ver producto</a>
-                </div>
-
-                <div class="component__card">
-                    <img class="component__card__img" src="assets/products/unsplash_ZV7lnfyQLmA.png" alt="">
-                    <p class="component__card__name">Producto XYZ</p>
-                    <p class="component__card__price">R$ 60,00</p>
-                    <a class="component__card__link" href="#">Ver producto</a>
-                </div>
-
-                <div class="component__card">
-                    <img class="component__card__img" src="assets/products/unsplash_wa5z9o9fgjw.png" alt="">
-                    <p class="component__card__name">Producto XYZ</p>
-                    <p class="component__card__price">R$ 60,00</p>
-                    <a class="component__card__link" href="#">Ver producto</a>
-                </div>
-
-                <div class="component__card component__card--full" >
-                    <img class="component__card__img" src="assets/products/unsplash_Zjn4dT993-g.png" alt="">
-                    <p class="component__card__name">Producto XYZ</p>
-                    <p class="component__card__price">R$ 60,00</p>
-                    <a class="component__card__link" href="#">Ver producto</a>
-                </div>
-
-                <div class="component__card component__card--full">
-                    <img class="component__card__img" src="assets/products/unsplash_k-xYhI3-gJM.png" alt="">
-                    <p class="component__card__name">Producto XYZ</p>
-                    <p class="component__card__price">R$ 60,00</p>
-                    <a class="component__card__link" href="#">Ver producto</a>
-                </div>
+                <!-- Cards agregadas con js -->
 
             </div>
 
@@ -203,57 +120,18 @@
         <section class="productsline">
 
             
-            <div id="consolas" class="productsline__top">
-                <h2 class="productsline__top__title">Diversos</h2>
+            <div class="productsline__top">
+                <h2 class="component__title">Diversos</h2>
                 <a class="productsline__top__link" href="#">
                     Ver todo <img src="assets/generals/arrow-icon.png" alt="Buscar">
                 </a>
             </div>
 
 
-         <div class="component__card__container">
+            <div class="component__card__container" data-diversos>
 
-                <div class="component__card">
-                    <img class="component__card__img" src="assets/products/unsplash_fMP-oCze3AY.png" alt="">
-                    <p class="component__card__name">Producto XYZ</p>
-                    <p class="component__card__price">R$ 60,00</p>
-                    <a class="component__card__link" href="#">Ver producto</a>
-                </div>
-                <div class="component__card">
-                    <img class="component__card__img" src="assets/products/unsplash_bUgaIaZysH0.png" alt="">
-                    <p class="component__card__name">Producto XYZ</p>
-                    <p class="component__card__price">R$ 60,00</p>
-                    <a class="component__card__link" href="#">Ver producto</a>
-                </div>
-
-                <div class="component__card">
-                    <img class="component__card__img" src="assets/products/unsplash_sYVY_ZKwaxU.png" alt="">
-                    <p class="component__card__name">Producto XYZ</p>
-                    <p class="component__card__price">R$ 60,00</p>
-                    <a class="component__card__link" href="#">Ver producto</a>
-                </div>
-
-                <div class="component__card">
-                    <img class="component__card__img" src="assets/products/unsplash_jMT6BrgBuXU.png" alt="">
-                    <p class="component__card__name">Producto XYZ</p>
-                    <p class="component__card__price">R$ 60,00</p>
-                    <a class="component__card__link" href="#">Ver producto</a>
-                </div>
-
-                <div class="component__card component__card--full" >
-                    <img class="component__card__img" src="assets/products/unsplash_MxVkWPiJALs.png" alt="">
-                    <p class="component__card__name">Producto XYZ</p>
-                    <p class="component__card__price">R$ 60,00</p>
-                    <a class="component__card__link" href="#">Ver producto</a>
-                </div>
-
-                <div class="component__card component__card--full">
-                    <img class="component__card__img" src="assets/products/unsplash_r27umXAelDc.png" alt="">
-                    <p class="component__card__name">Producto XYZ</p>
-                    <p class="component__card__price">R$ 60,00</p>
-                    <a class="component__card__link" href="#">Ver producto</a>
-                </div>
-
+                <!-- Cards agregadas con js -->
+                
             </div>
 
 
@@ -264,7 +142,7 @@
             <div class="footer__left">
 
                 <a href="#head">
-                    <img class="footer__left__logo" src="assets/generals/Logo.svg" alt="Logo AluraGeek">                        
+                    <img class="footer__left__logo" src="assets/generals/Logo.svg" alt="Logo AluraGeek">
                 </a>
 
                 <div class="footer__left__links">
@@ -304,7 +182,7 @@
         </section>
 
     </main>
-    
+
     <!-- Sección de Footer -->
     <section class="developer">
        <div class="developer__links">
