@@ -13,7 +13,8 @@ function handleSubmit(event) {
     const inputSearch = document.querySelector('[data-search]');
     const textSearch = inputSearch.value.toLowerCase();
 
-    const where = (event.srcElement.action).indexOf('index.html') > 0 ?'index' :'admin';
+    const where = (event.srcElement.action).indexOf('administrator.html') > 0 ?'admin' :'index';
+    
     let resultSearch = [];
     
     productService
@@ -28,5 +29,5 @@ function handleSubmit(event) {
             renderAdmin(resultSearch);    
         }
     })
-    .catch(() => alert('Ocurrio un error'));
+    .catch((error) => console.log(error));
 }
