@@ -70,7 +70,6 @@ const uploadImage = (file) => {
 	fileReader.readAsDataURL(file);
 	fileReader.addEventListener('load', (e) => {
 		img.setAttribute('src', e.target.result);
-		console.log(e.target.result);		
 	});
 }
 

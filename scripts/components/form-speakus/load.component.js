@@ -1,22 +1,22 @@
-import { handleSubmit } from "./submit.component.js";
-import { handleValid } from "./validation.component.js";
+import { handleSubmitSpeakUs } from "./submit.component.js";
+import { handleValidSpeakUs } from "./validation.component.js";
 
 export function loadFormSpeakUs() {
 
-    const inputs = document.querySelectorAll('.component__input');
+    const inputs = document.querySelectorAll('.input__SpeakUs');
     inputs.forEach((input) => {
         input.addEventListener('blur', (input) => {
-            handleValid(input.target);
+            handleValidSpeakUs(input.target);
         });
     });
     
-    const textareas = document.querySelectorAll('.component__textarea');
+    const textareas = document.querySelectorAll('.textarea__SpeakUs');
     textareas.forEach((textarea) => {
         textarea.addEventListener('blur', (textarea) => {
-            handleValid(textarea.target);
+            handleValidSpeakUs(textarea.target);
         });
     });
     
     const myForm = document.querySelector('#formSpeakUs');
-    myForm.addEventListener('submit', handleSubmit);
+    myForm.addEventListener('submit', handleSubmitSpeakUs);
 } 

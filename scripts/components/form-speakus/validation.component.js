@@ -1,4 +1,5 @@
-export function handleValid(input) {
+export function handleValidSpeakUs(input) {
+
     const typeInput = input.dataset.type;
 
     if(validators[typeInput]) {

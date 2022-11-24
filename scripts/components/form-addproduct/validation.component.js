@@ -1,6 +1,6 @@
-export function handleValid(input) {
+export function handleValidAddProduct(input) {
     const typeInput = input.dataset.type;
-    
+        
     if(input.validity.valid) {
         input.parentElement.classList.remove("component__input__container--invalid");
         input.parentElement.querySelector(".component__message__error").innerHTML = "";
@@ -34,8 +34,13 @@ const errorMessage = {
     },
     description: {
       valueMissing: "El campo Descripción no puede estar vacío",
-      patternMismatch: "El nombre debe contener entre 1 y 150 caracteres.",
+      patternMismatch: "La descripción debe contener entre 1 y 150 caracteres.",
+    },
+    cod: {
+      valueMissing: "El campo Código no puede estar vacío",
+      patternMismatch: "El código debe contener 6 dígitos numéricos",
     }
+
 };
 
 

@@ -80,7 +80,7 @@
                     <div class="addproduct__container__file">
 
                         <div class="file__result" id="result-image">
-							<img id="img-result" alt="" />
+							<img id="img-result" alt="" data-image/>
                         </div>
 
 
@@ -94,14 +94,14 @@
 
 
                     <div class="component__input__container">
-                        <input class="component__input" type="text" name="url" placeholder="URL de la imagen" required data-type="url" autocomplete="off" id="form-input">
+                        <input class="component__input input__addform" type="text" name="url" placeholder="URL de la imagen" required data-type="url" autocomplete="off" id="form-input">
                         <label class="component__label" for="url">URL de la imagen</label>
                         <span class="component__message__error"> Este campo no es valido</span>
                     </div>
 
                     <div class="component__input__container">
                         
-                        <select class="component__input" type="text" name="category" placeholder="Categoría" required pattern="[\s\S]{1,50}" data-type="category" autocomplete="off">
+                        <select class="component__input input__addform" type="text" name="category" placeholder="Categoría" required pattern="[\s\S]{1,50}" data-type="category" autocomplete="off" data-category>
                             <option value="1">Star Wars</option>
                             <option value="2">Consolas</option>
                             <option value="3">Diversos</option>
@@ -112,23 +112,30 @@
                     </div>
 
                     <div class="component__input__container">
-                        <input class="component__input" type="text" name="nameproduct" placeholder="Nombre del producto" required pattern="[\s\S]{1,20}" data-type="nameproduct" autocomplete="off">
-                        <label class="component__label" for="nameproduct">Nombre del producto</label>
+                        <input class="component__input input__addform" type="text" name="nameproduct" placeholder="Nombre del producto" required pattern="[\s\S]{1,20}" data-type="nameproduct" autocomplete="off" data-name>
+                        <label class="component__label" for="nameproduct">Nombre</label>
                         <span class="component__message__error"> Este campo no es valido</span>
                     </div>
 
                     <div class="component__input__container">
-                        <input class="component__input" type="number" step="0.01" name="price" placeholder="Precio" required data-type="price" autocomplete="off">
+                        <input class="component__input input__addform" type="number" step="0.01" name="price" placeholder="Precio" required data-type="price" autocomplete="off" data-price>
                         <label class="component__label" for="price">Precio</label>
                         <span class="component__message__error"> Este campo no es valido</span>
                     </div>
 
                     <div class="component__input__container">
-                        <input class="component__input" type="text" name="description" placeholder="Descripción del producto" required pattern="[\s\S]{1,150}" data-type="description" autocomplete="off">
-                        <label class="component__label" for="description">Descripción del producto</label>
+                        <input class="component__input input__addform" type="text" name="description" placeholder="Descripción del producto" required pattern="[\s\S]{1,150}" data-type="description" autocomplete="off" data-description>
+                        <label class="component__label" for="description">Descripción</label>
                         <span class="component__message__error"> Este campo no es valido</span>
                     </div>
              
+                    <div class="component__input__container">
+                        <input class="component__input input__addform" type="text" name="cod" placeholder="Código del producto" required pattern="[0-9
+                        ]{6}" data-type="cod" autocomplete="off" data-cod>
+                        <label class="component__label" for="cod">Código</label>
+                        <span class="component__message__error"> Este campo no es valido</span>
+                    </div>
+
                     <button type="submit" class="component__button component__button component__button--fill component__button--full">Agregar Producto</button>
 
                 </form>
@@ -162,13 +169,13 @@
                 <form class="footerform" action="https://formspree.io/f/xaykdbbr" method="post" name="form" id="formSpeakUs">
 
                     <div class="component__input__container">
-                        <input class="component__input" type="text" name="nombre" placeholder="Nombre" required pattern="[\s\S]{1,40}" data-type="name" autocomplete="off">
+                        <input class="component__input input__SpeakUs" type="text" name="nombre" placeholder="Nombre" required pattern="[\s\S]{1,40}" data-type="name" autocomplete="off">
                         <label class="component__label" for="nombre">Nombre</label>
                         <span class="component__message__error">Este campo no es valido</span>
                     </div>
 
                     <div class="component__input__container">
-                        <textarea class="component__textarea" rows="5" cols="40" id="message" name="mensaje" placeholder="Escribe tu mensaje" required maxlength="130" data-type="message"></textarea>
+                        <textarea class="component__textarea textarea__SpeakUs" rows="5" cols="40" id="message" name="mensaje" placeholder="Escribe tu mensaje" required maxlength="130" data-type="message"></textarea>
                         <label class="component__label" for="mensaje">Mensaje</label>
                         <span class="component__message__error">Este campo no es valido</span>
                     </div>
@@ -199,6 +206,7 @@
             <p>2022</p>
         </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.2.0/uuid.min.js" integrity="sha512-X0CJvcClD8EXFn5Oq8BD5lIsznKDfxb0Sf9Wr8MCCTyAEWaAAxr0Jvm3qyofsmN7eSHMZ0PPQGjVKroLAfexrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="../scripts/controllers/addproduct.controller.js"></script>
 
 </body>

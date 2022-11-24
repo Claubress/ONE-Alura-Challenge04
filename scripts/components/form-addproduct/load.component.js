@@ -1,22 +1,23 @@
-import { handleSubmit } from "./submit.component.js";
-import { handleValid } from "./validation.component.js";
+import { handleSubmitAddProduct } from "./submit.component.js";
+import { handleValidAddProduct } from "./validation.component.js";
 
 export function loadFormAddproduct() {
 
+
     const fileInput = document.getElementById('inputImage')
     fileInput.addEventListener('blur', (input) => {
-            handleValid(input.target);
+        handleValidAddProduct(input.target);
     });
 
     
-    const inputs = document.querySelectorAll('.component__input');
+    const inputs = document.querySelectorAll('.input__addform');
     inputs.forEach((input) => {
         input.addEventListener('blur', (input) => {
-            handleValid(input.target);
+            handleValidAddProduct(input.target);
         });
     });
     
 
     const myForm = document.querySelector('#formAddProduct');
-    myForm.addEventListener('submit', handleSubmit);
+    myForm.addEventListener('submit', handleSubmitAddProduct);
 }

@@ -1,4 +1,4 @@
-export async function handleSubmit(event) {
+export async function handleSubmitSpeakUs(event) {
     event.preventDefault();
     
     const formData = new FormData(this);

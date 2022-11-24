@@ -1,5 +1,5 @@
-import { handleSubmit } from "./submit.component.js";
-import { handleValid } from "./validation.component.js";
+import { handleSubmit } from "../form-login/submit.component.js";
+import { handleValid } from "../form-login/validation.component.js";
 
 export function loadFormLogin() {
 
