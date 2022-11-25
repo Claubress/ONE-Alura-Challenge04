@@ -3,18 +3,34 @@ import { renderClient } from "../card/renderclient.component.js"
 import { renderAdmin } from "../card/renderadmin.component.js";
 
 export function loadSearch() {
-    const mySearch = document.querySelector('.head__search__bar');
-    mySearch.addEventListener('submit', handleSubmit);
+    const barSearch = document.querySelector('.head__search__bar');
+    barSearch.addEventListener('submit', handleSubmitSearch);
+
+    const iconSearch =  document.querySelector('[data-icon]');
+    iconSearch.addEventListener('click', handleClickSearch);
 }
 
 
-function handleSubmit(event) {
+function handleSubmitSearch(event) {
     event.preventDefault();
     const inputSearch = document.querySelector('[data-search]');
     const textSearch = inputSearch.value.toLowerCase();
 
-    const where = (event.srcElement.action).indexOf('administrator.html') > 0 ?'admin' :'index';
-    
+    search(textSearch);
+
+}
+
+
+function handleClickSearch(event) {
+    event.preventDefault();
+    const textSearch = prompt('Buscar:').toLowerCase();
+    search(textSearch);
+}
+
+function search(textSearch) {
+    const url = new URL(window.location);
+    const where = (url.pathname).indexOf('administrator.html') > 0 ?'admin' :'index';
+
     let resultSearch = [];
     
     productService

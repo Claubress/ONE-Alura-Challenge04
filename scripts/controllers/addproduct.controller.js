@@ -8,7 +8,7 @@ const fileInput = document.getElementById('inputImage')
 const buttonInput = document.getElementById('file-button');
 const dropZone = document.getElementById('result-image')
 const img = document.getElementById('img-result')
-const url = document.getElementById('form-input');
+const inputUrl = document.getElementById('form-input');
 
 
 buttonInput.addEventListener('click', (e) => {
@@ -17,10 +17,10 @@ buttonInput.addEventListener('click', (e) => {
 });
 
 
-url.addEventListener('change', (e) => {
+inputUrl.addEventListener('change', (e) => {
 	e.preventDefault();
 
-	fetch(url.value)
+	fetch(inputUrl.value)
 		.then(res => res.blob())
 		.then(blob => {
 			const file = new File([blob], 'image', {type: blob.type});
@@ -48,19 +48,22 @@ dropZone.addEventListener('dragleave', (e) => {
 dropZone.addEventListener('drop', (e) => {
 	e.preventDefault();
 	fileInput.files = e.dataTransfer.files;
-	const file = fileInput.files[0];		
-	url.value = fileInput.value;
-	url.focus();
-	url.blur();
+	const file = fileInput.files[0];
+	inputUrl.removeAttribute('required')
+
+//	inputUrl.value = fileInput.value;
+	inputUrl.focus();
+	inputUrl.blur();
 	uploadImage(file);
 })
 
 
 fileInput.addEventListener('change', (e) => {
 	const file = e.target.files[0];
-	url.value = fileInput.value;
-	url.focus();
-	url.blur();
+	inputUrl.removeAttribute('required')
+//	inputUrl.value = fileInput.value;
+	inputUrl.focus();
+	inputUrl.blur();
 	uploadImage(file);
 })
 
