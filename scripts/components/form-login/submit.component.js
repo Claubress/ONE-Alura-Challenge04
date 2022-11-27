@@ -1,4 +1,5 @@
 import { userServices } from "../../services/user.service.js";
+import { storageService } from "../../services/storage.service.js";
 
 export function handleSubmit(event) {
     event.preventDefault();
@@ -13,13 +14,14 @@ export function handleSubmit(event) {
         .listUsers()
         .then((data) => {
             data.forEach((user) => {
-                if(email === user.email && password === user.password) {
+                if(email.toLowerCase() === user.email.toLowerCase() && password === user.password) {
                     valid = true;
                 }
             }); 
             
             if(valid) {
                 this.reset();
+                storageService.store('token', uuid.v4());
                 window.location.href =  '/screens/administrator.html'
             } else {
                 alert('Combinación email-password inválida')

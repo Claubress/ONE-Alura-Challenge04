@@ -1,5 +1,12 @@
 import { loadFormSpeakUs } from "../components/form-speakus/load.component.js";
 import { loadFormAddproduct } from "../components/form-addproduct/load.component.js";
+import { storageService } from "../services/storage.service.js";
+
+// Simulate rutes
+const admin = storageService.retrieve('token');
+if(!admin) {
+  window.location.href =  '/index.html'
+}
 
 loadFormSpeakUs();
 loadFormAddproduct();
@@ -20,7 +27,8 @@ buttonInput.addEventListener('click', (e) => {
 inputUrl.addEventListener('change', (e) => {
 	e.preventDefault();
 
-	fetch(inputUrl.value)
+	
+	fetch(`https://api.codetabs.com/v1/proxy/?quest=${inputUrl.value}`)
 		.then(res => res.blob())
 		.then(blob => {
 			const file = new File([blob], 'image', {type: blob.type});
@@ -50,8 +58,6 @@ dropZone.addEventListener('drop', (e) => {
 	fileInput.files = e.dataTransfer.files;
 	const file = fileInput.files[0];
 	inputUrl.removeAttribute('required')
-
-//	inputUrl.value = fileInput.value;
 	inputUrl.focus();
 	inputUrl.blur();
 	uploadImage(file);
@@ -61,7 +67,6 @@ dropZone.addEventListener('drop', (e) => {
 fileInput.addEventListener('change', (e) => {
 	const file = e.target.files[0];
 	inputUrl.removeAttribute('required')
-//	inputUrl.value = fileInput.value;
 	inputUrl.focus();
 	inputUrl.blur();
 	uploadImage(file);
@@ -75,4 +80,3 @@ const uploadImage = (file) => {
 		img.setAttribute('src', e.target.result);
 	});
 }
-

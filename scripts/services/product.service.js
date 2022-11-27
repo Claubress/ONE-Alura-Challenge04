@@ -1,4 +1,9 @@
-const server = 'http://localhost:3000';
+// local 
+// const server = 'http://localhost:3000';
+
+// Remoto on render.com
+const server = 'https://json-data-test.onrender.com';
+
 
 
 const listProduct = () => fetch(server + '/product').then((respuesta) => respuesta.json());
@@ -21,6 +26,7 @@ const deleteProduct = (id) => {
   })
 }
 
+
 const updateProduct = (id, category, name, price, description, cod, image) => {
   return fetch(server + `/product/${id}`, {
     method: 'PUT',
@@ -33,12 +39,18 @@ const updateProduct = (id, category, name, price, description, cod, image) => {
     .catch(err => alert('Ocurrió un error'))
 }
 
+
 const detailProduct = (id) => {
   return fetch(server + `/product/${id}`).then(respuesta => respuesta.json());
 }
 
+
+const listProductCategory = (cat) => fetch(server + `/product?category=${cat}`).then((respuesta) => respuesta.json());
+
+
 export const productService = {
     listProduct,
+    listProductCategory,
     crearProduct,
     deleteProduct,
     updateProduct,

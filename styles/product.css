@@ -7,12 +7,13 @@
 
 .product__imagen__container {
     width: 100vw;
-    height: 192px;
+    height: 350px;
     overflow: hidden;
 }
 
 .product__image {
-    margin-top: -90px;
+    margin-top: 0;
+    height: auto;
     width: 100%;
 }
 
@@ -48,10 +49,6 @@
         height: 157px;
     }
 
-    .product__image {
-        margin-top: -35px;
-    }
-    
     .product__text {
         width: 65%;
         padding: 0;    
@@ -65,13 +62,13 @@
 
     .product__imagen__container {
         width: 50%;
-        height: 403px;
+        height: 500px;
     }
 
     .product__image {
-        margin-top: -80px;
+        max-height: 500px;
     }
-
+    
     .product__text {
         width: 50%;
         justify-content: center;

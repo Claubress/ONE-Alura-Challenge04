@@ -15,19 +15,18 @@ export const createNewCard = (id, name, price, image, cod, admin) => {
             <div class="component__card__buttons">
                 
                 <button class="component__card__button" type="button" id="${id}">
-                    <img src="../assets/generals/delete.png" alt="Borrar">
+                    <img src="../assets/generals/deletered.png" alt="Borrar">
                 </button>
 
                 <a href="../screens/editproduct.html?id=${id}" class="component__card__button">
-                    <img src="../assets/generals/edit.png" alt="Editar">
+                    <img src="../assets/generals/editred.png" alt="Editar">
                 </a>
     
-                
             </div>
         
         </div>
         <p class="component__card__name">${name}</p>
-        <p class="component__card__price">R$ ${price}</p>
+        <p class="component__card__price">AR$ ${price}</p>
         <p class="component__card__cod">#${cod}</p>
         `;
     
@@ -35,8 +34,8 @@ export const createNewCard = (id, name, price, image, cod, admin) => {
         contenido = `
             <img class="component__card__img" src=${image}>
             <p class="component__card__name">${name}</p>
-            <p class="component__card__price">R$ ${price}</p>
-            <a class="component__card__link" href="screens/product.html?id=${id}">Ver producto</a>
+            <p class="component__card__price">AR$ ${price}</p>
+            <a class="component__card__link" href="/screens/product.html?id=${id}">Ver producto</a>
         `;
     }
 

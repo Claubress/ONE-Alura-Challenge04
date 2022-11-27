@@ -1,6 +1,8 @@
 import { productService } from "../services/product.service.js";
 import { loadFormSpeakUs } from "../components/form-speakus/load.component.js";
 import { loadFormEditProduct } from "../components/form-editproduct/load.component.js";
+import { storageService } from "../services/storage.service.js";
+
 
 loadFormSpeakUs();
 loadFormEditProduct();
@@ -50,8 +52,13 @@ const getInformation = async () => {
     }
 }
 
-getInformation();
-
+// Simulate rutes
+const admin = storageService.retrieve('token');
+if(!admin) {
+  	window.location.href =  '/index.html'
+} else {
+	getInformation();
+}
 
 const fileInput = document.getElementById('inputImage')
 const buttonInput = document.getElementById('file-button');

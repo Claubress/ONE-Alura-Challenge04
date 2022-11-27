@@ -10,7 +10,7 @@ export function renderClient(data) {
   category2.innerHTML = '';
   category3.innerHTML = '';
 
-  const divice = screen.width < 1024 ?4 :6;
+  const device = screen.width < 1024 ?4 :6;
 
   let countCard1 = 0;
   let countCard2 = 0;
@@ -19,17 +19,17 @@ export function renderClient(data) {
   data.forEach(({id, category, name, price, image, cod}) => {
       const newCard = createNewCard(id, name, price, image, cod, false);
       if(category === 'Star Wars') {
-        if(countCard1 < divice) {
+        if(countCard1 < device) {
           category1.appendChild(newCard);
           countCard1++;
         }
       } else if(category === 'Consolas') {
-        if(countCard2 < divice) {
+        if(countCard2 < device) {
           category2.appendChild(newCard);
           countCard2++;
         }
       } else {
-        if(countCard3 < divice) {
+        if(countCard3 < device) {
           category3.appendChild(newCard);
           countCard3++;
         }
