@@ -9,7 +9,7 @@
 .component__card {
     display: flex;
     flex-direction: column;
-    width: 47.65%;
+    width: 46%;
     gap: 0.5rem
 }
 
