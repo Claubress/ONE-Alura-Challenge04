@@ -55,7 +55,7 @@ const getInformation = async () => {
 // Simulate rutes
 const admin = storageService.retrieve('token');
 if(!admin) {
-  	window.location.href =  '/index.html'
+  	window.location.href =  '../index.html'
 } else {
 	getInformation();
 }

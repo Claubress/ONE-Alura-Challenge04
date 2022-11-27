@@ -25,7 +25,7 @@ export function handleSubmitEditProduct(event) {
             img.setAttribute('src', '');
             this.reset();
             alert('Producto actualizado');
-            window.location.href = '/screens/administrator.html';
+            window.location.href = 'administrator.html';
         })
         .catch(err => console.log(err));
     

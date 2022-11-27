@@ -11,7 +11,7 @@ loadSearch();
 const admin = storageService.retrieve('token');
 
 if(!admin) {
-  window.location.href =  '/index.html'
+  window.location.href =  '../index.html'
 } else {
   productService
     .listProduct()

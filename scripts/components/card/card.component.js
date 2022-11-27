@@ -18,7 +18,7 @@ export const createNewCard = (id, name, price, image, cod, admin) => {
                     <img src="../assets/generals/deletered.png" alt="Borrar">
                 </button>
 
-                <a href="../screens/editproduct.html?id=${id}" class="component__card__button">
+                <a href="editproduct.html?id=${id}" class="component__card__button">
                     <img src="../assets/generals/editred.png" alt="Editar">
                 </a>
     
@@ -31,12 +31,21 @@ export const createNewCard = (id, name, price, image, cod, admin) => {
         `;
     
     } else {
+
         contenido = `
             <img class="component__card__img" src=${image}>
             <p class="component__card__name">${name}</p>
             <p class="component__card__price">AR$ ${price}</p>
-            <a class="component__card__link" href="/screens/product.html?id=${id}">Ver producto</a>
+            <a class="component__card__link" href="
         `;
+        const url = new URL(window.location);
+        const where = (url.pathname).indexOf('product.html') > 0 ?'product' :'index';
+
+        if(where === 'product') {            
+            contenido += `product.html?id=${id}">Ver producto</a>`
+        } else {
+            contenido += `screens/product.html?id=${id}">Ver producto</a>`
+        }
     }
 
     card.innerHTML = contenido;

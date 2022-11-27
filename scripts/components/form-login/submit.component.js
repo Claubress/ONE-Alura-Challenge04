@@ -22,7 +22,7 @@ export function handleSubmit(event) {
             if(valid) {
                 this.reset();
                 storageService.store('token', uuid.v4());
-                window.location.href =  '/screens/administrator.html'
+                window.location.href = 'administrator.html'
             } else {
                 alert('Combinación email-password inválida')
             }
